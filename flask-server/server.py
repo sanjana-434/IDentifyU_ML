@@ -69,9 +69,9 @@ from sklearn.model_selection import train_test_split
 from sklearn.svm import SVC
 from PIL import Image
 
-dir = 'IDentifyU/dataset'
+dir = 'D:/Lab_Main/Sem_5/ML/package/IDentifyU/dataset'
 
-categories = ['AngelinaJulie','WillSmith']
+categories = ['AngelinaJulie','JenniferLawrence','TomCruise','WillSmith',]
 data = []
 
 for category in categories:
@@ -141,20 +141,20 @@ plt.show()
 
 
 
-image_path = 'C:/Users/User/Downloads/captured-image.jpg'  # Replace with the actual path to your image
-image = Image.open(image_path)  # Open the image
-image = image.resize((50, 50))  # Resize to the expected size (50x50)
-image = image.convert('L')  # Convert to grayscale
-image = np.array(image)  # Convert to a NumPy array
+# image_path = 'C:/Users/User/Downloads/captured-image.jpg'  # Replace with the actual path to your image
+# image = Image.open(image_path)  # Open the image
+# image = image.resize((50, 50))  # Resize to the expected size (50x50)
+# image = image.convert('L')  # Convert to grayscale
+# image = np.array(image)  # Convert to a NumPy array
 
-# Reshape the image to match the model's input shape
-image = image.reshape(1, -1)
+# # Reshape the image to match the model's input shape
+# image = image.reshape(1, -1)
 
-# Make a prediction
-prediction = model.predict(image)
+# # Make a prediction
+# prediction = model.predict(image)
 
-print('Prediction: ', categories[prediction[0]])
+# print('Prediction: ', categories[prediction[0]])
 
-person = image.reshape(50,50)
-plt.imshow(person,cmap = 'gray')
-plt.show()
+# person = image.reshape(50,50)
+# plt.imshow(person,cmap = 'gray')
+# plt.show()
